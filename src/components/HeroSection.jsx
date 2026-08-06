@@ -15,7 +15,7 @@ const HeroSection = () => {
           Find Properties <FaArrowRight />
         </button>
       </div>
-      <img src={house} alt="house" className = "absolute top-[340px] max-w-none -rotate-0 w-[1700px] right-[-50px] -rotate-[0.5deg]"/>
+      <img src={house} alt="house" className = "absolute top-[340px] max-w-none w-[1700px] right-[-50px] -rotate-[0.6deg]"/>
     </div>
   )
 }
