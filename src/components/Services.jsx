@@ -10,10 +10,10 @@ import service6 from "../assets/services6.webp"
 
 const MainContent = ({title, number, content, image}) => {
     return (
-    <div className = "h-[370px] border border-[0.5px] border-white/20 flex flex-row items-center border-x-black border-t-black px-[90px] relative">
-        <img src={image} alt="" className = "absolute inset-0 h-full w-full object-cover"/>
+    <div className = "h-[350px] border border-[0.5px] border-white/20 flex flex-row items-center border-x-black border-t-black px-[90px] relative group ">
+        <img src={image} alt="" className = "absolute bottom-0 left-0 h-[50%] opacity-0 w-full object-cover group-hover:h-full group-hover:opacity-100 duration-700 transition-all"/>
         <div className = "h-full w-full absolute bg-black opacity-70 left-0"></div>
-        <div className = "flex felx-row justify-center z-10">
+        <div className = "flex flex-row justify-center z-10">
             <div className = "border border-white/60 h-[45px] w-[45px] flex rounded-full items-center justify-center text-white text-[18px] mb-[200px] border-[2px] text-semibold font-geist">{number}</div>
             <div className = "flex flex-wrap w-[480px] h-max text-white text-[21px] ml-[70px] mb-[50px] pr-[140px]">{content}</div>
         </div>
@@ -21,19 +21,19 @@ const MainContent = ({title, number, content, image}) => {
         <div className = "w-[800px] flex flex-col text-white text-[70px] font-geist mt-[20px] text-[180px] mb-[70px] ml-[40px] z-10">
         {title}
         </div>
-        <div className = "text-white text-[180px] mb-[40px] z-10"><FaArrowRight /></div>
+        <div className = "text-white text-[180px] mb-[40px] z-10 opacity-0 group-hover:opacity-100 transition-all duration-400"><FaArrowRight /></div>
     </div>
     )
 }
 
 const ServicesContainer = ({title, image}) => {
     return (
-        <div className = "h-[370px] w-[430px] py-[30px] px-[40px] text-white relative">
+        <div className = "h-[370px] w-[430px] py-[30px] px-[40px] mr-[10px] ml-[10px] text-white relative hover:w-[500px] transition-all duration-700 group">
             <img src={image} alt="" className = "absolute inset-0 h-full w-full object-cover"/>
             <div className = "w-full h-full inset-0 object-cover z-10 bg-black absolute opacity-30"></div>
             <div className = "h-[300px] flex flex-col w-[250px] relative z-20">
                 <div className = "text-[33px] leading-10 font-geist font-semibold">{title}</div>
-                <div className = "absolute bottom-[0px]"><button className = "flex flex-row items-center justify-center gap-[10px] rounded-full border border-white px-[15px] py-[6px] text-[17px] border-[2px]">Learn More <FaArrowRight /></button></div>
+                <div className = "absolute bottom-[0px]"><button className = "flex flex-row items-center justify-center gap-[10px] rounded-full border border-white px-[15px] py-[6px] text-[17px] border-[2px] group-hover:bg-white group-hover:text-black transition-all duration-500">Learn More <FaArrowRight /></button></div>
             </div>
         </div>
     )
@@ -65,7 +65,7 @@ const Services = () => {
             <button className = "flex flex-row items-center gap-[15px] h-max px-[20px] py-[6px] rounded-full border border-white/70 text-black bg-white mt-[29px] text-[19px] font-semibold border-[2px] justify-center">Get Started with FIND<FaArrowRight /></button>
         </div>
       </div>
-      <div className = "flex flex-row items-center justify-between px-[90px] h-max w-screen mt-[30px]">
+      <div className = "flex flex-row items-center px-[90px] h-max w-screen mt-[30px]">
         <ServicesContainer title = "Morgage Services" image = {service1}/>
         <ServicesContainer title = "Property Management" image = {service2}/>
         <ServicesContainer title = "Construction and Real Estate Development" image = {service3}/>

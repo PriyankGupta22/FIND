@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaArrowRight } from "react-icons/fa";
+import Scroll from './Scroll';
 
 const Content = ({number, content}) => {
     return (
@@ -16,7 +17,7 @@ const Content = ({number, content}) => {
 
 const RewiredPage = () => {
   return (
-    <div className = "w-screen h-max py-[200px] flex justify-center items-center">
+    <div className = "w-screen h-max py-[200px] flex justify-center relative items-center">
       <div className = "h-[600px] w-[1350px] flex flex-row">
         <div className = "h-[300px] w-[650px] flex flex-col font-geist">
             <div className = "text-[65px]">Real Estate,</div>
@@ -30,6 +31,7 @@ const RewiredPage = () => {
             <Content number = "03" content = "Move Forward. We find what fits - and make it happen."/>
         </div>
       </div>
+      <div className = "absolute right-0 bottom-0"><Scroll /></div>
     </div>
   )
 }
